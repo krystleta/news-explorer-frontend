@@ -15,30 +15,31 @@ function NewsCardList({ handleSavedArticle, handleRemoveArticle }) {
   return (
     <div className="newscardlist__section">
       <h1 className="newscardlist__heading">Search results</h1>
-      { hasSearched ? (
+      {hasSearched ? (
         <>
-        <div className="newscardlist__items">
-        {searchResultArticles.slice(0, visible).map((item) => (
-          <NewsCard
-            key={item.publishedAt}
-            item={item}
-            handleSavedArticle={handleSavedArticle}
-            handleRemoveArticle={handleRemoveArticle}
-          />
-        ))}
-      </div>
-      <div className="newscardlist__more">
-        {visible < searchResultArticles.length && (
-          <button className="newscardlist__button" onClick={loadMore}>
-            Show more
-          </button>
-        )}
-      </div>
-      </>
+          <ul className="newscardlist__items">
+            <li className="newscardlist__item">
+              {searchResultArticles.slice(0, visible).map((item) => (
+                <NewsCard
+                  key={item.publishedAt}
+                  item={item}
+                  handleSavedArticle={handleSavedArticle}
+                  handleRemoveArticle={handleRemoveArticle}
+                />
+              ))}
+            </li>
+          </ul>
+          <div className="newscardlist__more">
+            {visible < searchResultArticles.length && (
+              <button className="newscardlist__button" onClick={loadMore}>
+                Show more
+              </button>
+            )}
+          </div>
+        </>
       ) : (
         ""
       )}
-      
     </div>
   );
 }

@@ -12,23 +12,25 @@ function SavedNewsCardsList({ handleRemoveArticle }) {
   };
   return (
     <div className="savednewscardlist__section">
+      <ul className="savednewscardlist__items">
+        <li className="savednewscardlist__item">
+          {savedArticles.slice(0, visible).map((item) => (
+            <NewsCard
+              key={item.publishedAt}
+              item={item}
+              handleRemoveArticle={handleRemoveArticle}
+            />
+          ))}
+        </li>
+      </ul>
 
-      <div className="savednewscardlist__items">
-        {savedArticles.slice(0, visible).map((item) => (
-          <NewsCard
-            key={item.publishedAt}
-            item={item}
-            handleRemoveArticle={handleRemoveArticle}
-          />
-        ))}
-      </div>
-      <div className="savednewscardlist__more">
-        {visible < savedArticles.length && (
+      {visible < savedArticles.length && (
+        <div className="savednewscardlist__more">
           <button className="savednewscardlist__button" onClick={loadMore}>
             Show more
           </button>
-        )}
-      </div>
+        </div>
+      )}
     </div>
   );
 }

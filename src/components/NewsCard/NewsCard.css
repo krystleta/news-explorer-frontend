@@ -51,7 +51,7 @@
   object-fit: cover;
 }
 
-.newscard__header {
+.newscard__header, .newscard__header-bookmark {
   display: flex;
   flex-direction: row;
   margin: 24px;
@@ -59,8 +59,24 @@
   position: absolute;
   height: 40px;
   align-items: center;
-  justify-content: space-between;
   width: 355px;
+}
+.newscard__header {
+  justify-content: space-between;
+}
+.newscard__header-bookmark {
+  justify-content: flex-end;
+}
+
+.newscard__header-bookmark-button {
+  justify-content: flex-end;
+  background-color: #ffffff;
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  transition: background-image 0.3s ease-in-out;
+  cursor: pointer;
+  border: 0;
 }
 
 .newscard__header-keyword {
@@ -74,25 +90,11 @@
   color: #000000;
 }
 
-.newscard__header-bookmark {
-  background-color: #ffffff;
-  border-radius: 8px;
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  left: 312px;
-  transition: background-image 0.3s ease-in-out;
-  cursor: pointer;
-  border: 0;
-}
-
-.newscard__header-bookmark-active {
+.newscard__header-bookmark-button-active {
   margin-bottom: -2px;
 }
 
 .newscard__header-delete-container {
-  /* position: absolute;
-  left: 310px; */
   display: flex;
 }
 
@@ -119,13 +121,8 @@
   transition: 0.3s ease-in-out;
 }
 
-.newscard__header-remove-saved-hidden {
+.newscard__header-remove-saved-hidden, .newscard__header-signin-hidden {
   margin-right: 5px;
-}
-
-.newscard__header-signin-hidden {
-  position: relative;
-  left: 135px;
 }
 
 .newscard__header-signin {
@@ -134,4 +131,18 @@
 
 .newscard__header-remove-saved {
   display: none;
+}
+
+@media screen and (max-width: 480px) {
+  .newscard__container,
+  .newscard__image {
+    max-width: 288px;
+    max-height: 196px;
+  }
+  .newscard__header, .newscard__header-bookmark {
+    max-width: 242px;
+  }
+  .newscard__title {
+    font-size: 22px;
+  }
 }

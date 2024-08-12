@@ -23,3 +23,16 @@
 .savednews__header-tags {
   font-weight: 600;
 }
+
+@media screen and (max-width: 768px) {
+  .savednews__header-info {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .savednews__header-info {
+    max-width: 230px;
+    font-size: 30px;
+  }
+}

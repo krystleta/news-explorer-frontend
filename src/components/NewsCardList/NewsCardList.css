@@ -15,11 +15,19 @@
 }
 
 .newscardlist__items {
+  margin: 0;
+  padding: 0;
+}
+
+.newscardlist__item {
   display: flex;
   column-gap: 16px;
   row-gap: 16px;
   flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
 }
+
 
 .newscardlist__more {
   margin: 64px auto 80px;
@@ -45,12 +53,26 @@
 
 @media screen and (max-width: 768px) {
   .newscardlist__section {
-    margin: 26px 16px auto;
+    margin: 40px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .newscardlist__item {
+    /* margin: auto; */
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .newscardlist__section {
+    margin: 32px 16px 0;
   }
   .newscardlist__heading {
-    margin: 32px 0 58px;
+    font-size: 30px;
   }
-  .newscardlist__items {
-    margin: auto;
+  .newscardlist__item {
+    /* margin: auto;*/
+    justify-content: center; 
   }
 }

@@ -8,9 +8,7 @@ function SavedNews({ handleRemoveArticle }) {
       <div className="savednews__section">
         <SavedNewsHeader />
       </div>
-      <div className="savednewslist__section">
-        <SavedNewsCardsList handleRemoveArticle={handleRemoveArticle} />
-      </div>
+      <SavedNewsCardsList handleRemoveArticle={handleRemoveArticle} />
     </>
   );
 }
