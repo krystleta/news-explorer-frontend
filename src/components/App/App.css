@@ -1,0 +1,32 @@
+.page {
+  background-color: #f5f6f7;
+  font-family: "Roboto", Arial, sans-serif;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* display: flex;
+  flex-direction: column; */
+}
+
+.page__content {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0;
+  background-color: #f5f6f7;
+  box-sizing: border-box;
+}
+
+.page__content-header {
+  background-image: url(../../assets/header-background.svg);
+  background-repeat: no-repeat;
+}
+
+.page__content-header-savednews {
+  background-color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+  .page__content-header {
+    background-position-x: center;
+  }
+}

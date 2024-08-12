@@ -1,0 +1,25 @@
+.notfound__section {
+  margin: 86px auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.notfound__image {
+  height: 83px;
+  width: 83px;
+}
+.notfound__notfound-heading {
+  font-family: "RobotoSlab", Georgia, "Times New Roman", Times, serif;
+  font-size: 26px;
+  color: #1a1b22;
+  font-weight: 500;
+}
+
+.notfound__notfound-text {
+  font-size: 18px;
+  color: #b6bcbf;
+  font-weight: 400;
+  width: 240px;
+}

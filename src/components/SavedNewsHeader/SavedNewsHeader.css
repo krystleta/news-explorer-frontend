@@ -1,0 +1,25 @@
+.savednews__header-title {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.3;
+  color: rgba(26, 27, 34, 0.5);
+}
+
+.savednews__header-info {
+  font-family: "RobotoSlab", Georgia, "Times New Roman", Times, serif;
+  font-size: 40px;
+  font-weight: 400;
+  width: 530px;
+  margin: 28px 0 30px;
+}
+
+.savednews__header-keywords {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.3;
+  color: #1a1b22;
+}
+
+.savednews__header-tags {
+  font-weight: 600;
+}

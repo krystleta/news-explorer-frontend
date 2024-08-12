@@ -1,0 +1,56 @@
+.newscardlist__section {
+  background-color: #f5f6f7;
+  margin: 64px 102px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.newscardlist__heading {
+  font-family: "RobotoSlab", Georgia, "Times New Roman", Times, serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1.15;
+  padding: 0;
+  margin: 0px 0 64px;
+}
+
+.newscardlist__items {
+  display: flex;
+  column-gap: 16px;
+  row-gap: 16px;
+  flex-wrap: wrap;
+}
+
+.newscardlist__more {
+  margin: 64px auto 80px;
+}
+
+.newscardlist__button {
+  width: 288px;
+  height: 64px;
+  background-color: #ffffff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 100px;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1b22;
+}
+
+.newscardlist__button:hover {
+  background-color: #e8e8e8;
+}
+
+@media screen and (max-width: 768px) {
+  .newscardlist__section {
+    margin: 26px 16px auto;
+  }
+  .newscardlist__heading {
+    margin: 32px 0 58px;
+  }
+  .newscardlist__items {
+    margin: auto;
+  }
+}

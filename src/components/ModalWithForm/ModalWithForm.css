@@ -1,0 +1,140 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  transition: visibility 0s, opacity 0.5s linear;
+  font-family: "Roboto", Arial, sans-serif;
+  font-weight: 900;
+  visibility: hidden;
+}
+
+.modal_opened {
+  visibility: visible;
+}
+
+.modal__container {
+  background-color: #ffffff;
+  position: relative;
+  margin: auto;
+  border-radius: 10px;
+  max-width: 430px;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 16px;
+}
+
+.modal__close {
+  background: url(/src/assets/close-button.png) no-repeat transparent;
+  cursor: pointer;
+  border: none;
+  position: absolute;
+  top: -36px;
+  right: -36px;
+  outline: none;
+  width: 40px;
+  height: 40px;
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  padding: 22px 36px 28px;
+}
+
+.modal__heading {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 1.1;
+  color: #000;
+  margin: 0;
+  padding: 34px 28px 0px 36px;
+}
+
+.modal__form .modal__input {
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 9px 0px 10px 0;
+  line-height: 1.2;
+  width: 100%;
+  margin-bottom: 13px;
+}
+
+.modal__form .modal__button,
+.modal__form .modal__button-disabled {
+  width: 358px;
+  height: 64px;
+  border: none;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.2;
+  cursor: pointer;
+}
+
+.modal__form .modal__button-disabled {
+  background-color: #e6e8eb;
+  color: #b6bcbf;
+}
+
+.modal__form .modal__button {
+  background-color: #2f71e5;
+  color: #ffffff;
+  filter: drop-shadow(0px 5px 15px rgba(14, 26, 57, 0.5));
+}
+
+.modal__form .modal__button:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.modal__label {
+  font-size: 12px;
+  color: #2f71e5;
+  margin-bottom: 18px;
+}
+
+::placeholder {
+  opacity: 0.5;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.modal__legend {
+  margin-bottom: 12px;
+}
+
+label:has(input:checked) {
+  color: #000000;
+}
+
+.modal__button-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__alt-text {
+  font-size: 14px;
+  margin: 16px auto 0;
+}
+
+.modal__form .modal__button-span {
+  font-family: "Roboto", Arial, sans-serif;
+  line-height: 1.2;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  background: transparent;
+  color: #2f71e5;
+}
+
+.modal__error-input-error-message {
+  color: #ff0000;
+  margin-top: 13px;
+}

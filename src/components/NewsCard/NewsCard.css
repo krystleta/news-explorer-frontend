@@ -1,0 +1,137 @@
+.newscard__container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 8px;
+  max-width: 400px;
+  min-height: 576px;
+}
+
+.newscard__date {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.3;
+  color: #b6bcbf;
+  margin: 20px 24px 0 24px;
+}
+
+.newscard__title {
+  font-family: "RobotoSlab", Georgia, "Times New Roman", Times, serif;
+  font-size: 26px;
+  font-weight: 400;
+  color: #1a1b22;
+  background: #ffffff;
+  margin: 12px 24px 16px;
+  border-radius: 4px;
+}
+
+.newscard__abstract {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.3;
+  margin: 0 24px;
+}
+
+.newscard__source {
+  font-family: "RobotoSlab", Georgia, "Times New Roman", Times, serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #b6bcbf;
+  text-transform: uppercase;
+  margin: 18px 24px 24px;
+  position: absolute;
+  bottom: 0;
+}
+
+.newscard__image {
+  width: 400px;
+  height: 272px;
+  border-radius: 8px 8px 0 0;
+  object-fit: cover;
+}
+
+.newscard__header {
+  display: flex;
+  flex-direction: row;
+  margin: 24px;
+  background: transparent;
+  position: absolute;
+  height: 40px;
+  align-items: center;
+  justify-content: space-between;
+  width: 355px;
+}
+
+.newscard__header-keyword {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 8px 22px;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
+  font-weight: 600;
+  color: #000000;
+}
+
+.newscard__header-bookmark {
+  background-color: #ffffff;
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 312px;
+  transition: background-image 0.3s ease-in-out;
+  cursor: pointer;
+  border: 0;
+}
+
+.newscard__header-bookmark-active {
+  margin-bottom: -2px;
+}
+
+.newscard__header-delete-container {
+  /* position: absolute;
+  left: 310px; */
+  display: flex;
+}
+
+.newscard__header-trash {
+  background-color: #ffffff;
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  transition: background-image 0.3s ease-in-out;
+  cursor: pointer;
+  border: 0;
+}
+
+.newscard__header-remove-saved-hidden,
+.newscard__header-signin-hidden {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 11px 26px;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 600;
+  color: #000000;
+  transition: 0.3s ease-in-out;
+}
+
+.newscard__header-remove-saved-hidden {
+  margin-right: 5px;
+}
+
+.newscard__header-signin-hidden {
+  position: relative;
+  left: 135px;
+}
+
+.newscard__header-signin {
+  display: none;
+}
+
+.newscard__header-remove-saved {
+  display: none;
+}

@@ -1,0 +1,217 @@
+.navigation__bar,
+.navigation__bar-savednews {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 1.3;
+  display: flex;
+  align-items: center;
+  padding: 19px 104px 13px 104px;
+}
+
+.navigation__bar-logo {
+  margin-bottom: -5px;
+}
+
+.navigation__bar a,
+.navigation__bar-savednews a {
+  text-decoration: none;
+  color: #1a1b22;
+}
+
+.navigation__bar-right {
+  margin: 0 0 0 auto;
+}
+
+.navigation__bar-title {
+  font-family: "RobotoSlab", Georgia, "Times New Roman", Times, serif;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+.navigation__bar-links {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation__bar-link-saved {
+  margin-left: 76px;
+}
+
+.navigation__bar-link-logout {
+  margin-left: 64px;
+}
+
+.navigation__bar-button {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  color: #ffffff;
+  padding: 0;
+}
+
+.navigation__bar-signin-button {
+  border: none;
+  cursor: pointer;
+  border: 1px solid #ffffff;
+  border-radius: 50px;
+  background-color: transparent;
+  color: #ffffff;
+  width: 176px;
+  height: 48px;
+  margin-left: 42px;
+}
+
+.navigation__bar-logout-button {
+  border: none;
+  cursor: pointer;
+  border: 1px solid #ffffff;
+  border-radius: 50px;
+  background-color: transparent;
+  color: #ffffff;
+  height: 48px;
+  padding: 0 15px 12px 19px;
+}
+
+.navigation__bar-logout-icon {
+  width: 24px;
+  height: 24px;
+  border: none;
+  outline: none;
+  margin: 5px 0 0 12px;
+  transition: all ease 400ms;
+  position: relative;
+  top: 4px;
+}
+
+.navigation__bar-savednews .navigation__bar-title {
+  color: #1a1b22;
+  font-weight: 700;
+}
+
+.navigation__bar-savednews .navigation__bar-button,
+.navigation__bar-savednews .navigation__bar-logout-button {
+  color: #1a1b22;
+  font-weight: 600;
+}
+
+.navigation__bar-savednews .navigation__bar-logout-button {
+  border: 1px solid #1a1b22;
+}
+
+.navigation__hamburger {
+  height: 100%;
+  width: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  cursor: pointer;
+  margin: 16px;
+}
+
+.navigation__hamburger .burger-bar {
+  width: 16px;
+  height: 2px;
+  background-color: #fff;
+  margin: 4px 0px;
+}
+
+.navigation__bar-mobile-savednews .navigation__hamburger .burger-bar {
+  width: 16px;
+  height: 2px;
+  background-color: #1a1b22;
+  margin: 4px 0px;
+}
+
+.navigation__bar-right-mobile {
+  width: 100%;
+  /* height: 100vh; */
+  background-color: rgb(154, 181, 240);
+  position: absolute;
+  top: 59px;
+  z-index: 98;
+  transition: 0.4s;
+}
+
+.navigation__bar-mobile .navigation__bar-left,
+.navigation__bar-mobile-savednews .navigation__bar-left {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation__bar-mobile .navigation__bar-logo,
+.navigation__bar-mobile-savednews .navigation__bar-logo {
+  margin: 16px;
+  padding: 0;
+}
+
+.navigation__bar-mobile .navigation__bar-links,
+.navigation__bar-mobile-savednews .navigation__bar-links {
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 22px;
+  margin: 0px 16px;
+  padding: 16px 0 24px;
+}
+
+.navigation__bar-mobile .navigation__bar-right-mobile,
+.navigation__bar-mobile .navigation__bar-left {
+  background-color: #1a1b22;
+}
+
+.navigation__bar-mobile-savednews .navigation__bar-right-mobile {
+  background-color: #ffffff;
+}
+
+.navigation__bar-mobile-savednews .navigation__bar-button {
+  color: #1a1b22;
+}
+
+.navigation__bar-mobile-savednews .navigation__bar-logout-button {
+  border: 1px solid #1a1b22;
+  color: #1a1b22;
+}
+
+.navigation__bar-mobile .navigation__bar-right {
+  margin: 0;
+}
+
+.navigation__bar-mobile .navigation__bar-link-saved,
+.navigation__bar-mobile .navigation__bar-link-logout,
+.navigation__bar-mobile-savednews .navigation__bar-link-saved,
+.navigation__bar-mobile-savednews .navigation__bar-link-logout {
+  margin: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: inherit;
+}
+
+/* ----- animations--------- */
+/* clicked */
+.burger-bar.clicked:nth-child(1) {
+  transform: rotate(45deg) translate(2px, 3px);
+  transition: ease-out 0.5s;
+}
+
+.burger-bar.clicked:nth-child(2) {
+  transform: rotate(135deg) translate(-4px, 5px);
+  transition: ease-out 0.5s;
+}
+
+/* unclicked */
+.burger-bar.unclicked {
+  transform: rotate(0) translate(0);
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+}

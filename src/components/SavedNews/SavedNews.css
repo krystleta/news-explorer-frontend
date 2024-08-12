@@ -1,0 +1,18 @@
+.savednews__section {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  margin: 40px 102px auto;
+}
+
+@media screen and (max-width: 768px) {
+  .savednews__section {
+    margin: 40px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .savednews__section {
+    margin: 16px 16px 32px;
+  }
+}

@@ -1,0 +1,28 @@
+.header__signedin {
+  height: auto;
+  font-family: "Roboto", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  background-color: #ffffff;
+  color: #1a1b22;
+}
+
+.header {
+  height: auto;
+  font-family: "Roboto", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.header__savednews {
+  border-bottom: 1px solid #d1d2d6;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    border-bottom: none;
+  }
+}
