@@ -19,4 +19,4 @@ Thank you for taking the time to review my project!
   
 **Link to the project**  
   
-* [Link to the project on Github](https://github.com/krystleta/news-explorer-frontend)  
+* [Link to the project on Github](https://github.com/krystleta/news-explorer-frontend/pullrequests)  
