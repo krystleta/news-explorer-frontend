@@ -68,7 +68,7 @@
   background-color: #347eff;
 }
 
-.searchform__buttonsection-:active {
+.searchform__section-button:active {
   background-color: #2a65cc;
 }
 
@@ -90,7 +90,7 @@
   }
   .searchform__section-title,
   .searchform__section-content {
-    width: 285px;
+    max-width: 272px;
   }
   .searchform__section-title {
     font-size: 36px;
@@ -102,6 +102,14 @@
     position: relative;
   }
   .searchform__section-input {
-    max-width: 288px;
+    max-width: 258px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .searchform__section-title,
+  .searchform__section-content,
+  .newscardlist__button {
+    max-width: 272px;
   }
 }

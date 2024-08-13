@@ -17,7 +17,7 @@
 }
 
 .page__content-header {
-  background-image: url(../../assets/header-background.svg);
+  background-image: url(../../assets/header-background.jpg);
   background-repeat: no-repeat;
 }
 
@@ -30,3 +30,5 @@
     background-position-x: center;
   }
 }
+
+

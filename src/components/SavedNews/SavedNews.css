@@ -7,7 +7,8 @@
 
 @media screen and (max-width: 768px) {
   .savednews__section {
-    margin: 40px;
+    margin: 16px 16px 32px;
+    max-width: 400px;
   }
 }
 

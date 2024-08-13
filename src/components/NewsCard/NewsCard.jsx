@@ -7,7 +7,7 @@ import {
   formatArticleDate,
   checkValidImage,
 } from "../../utils/utilityfunctions";
-import defaultImage from "../../assets/header-background.svg";
+import defaultImage from "../../assets/header-background.jpg";
 import bookmarkSaved from "../../assets/bookmark-icon-marked.svg";
 import bookmarkImage from "../../assets/bookmark-icon-normal.svg";
 import bookmarkHover from "../../assets/bookmark-icon-hover.svg";
@@ -42,54 +42,62 @@ function NewsCard({ item, handleSavedArticle, handleRemoveArticle }) {
 
   return (
     <div className="newscard__container">
-      <div className="newscard__header">
-        {isLoggedIn && isSaved ? (
-          <>
-            <div className="newscard__header-keyword">
+      {isLoggedIn && isSaved ? (
+        <>
+          <div className="newscard__header">
+            <p className="newscard__header-keyword">
               {item.keywordTag ? item.keywordTag : " "}
-            </div>
+            </p>
             <div className="newscard__header-delete-container">
-            <div
-              className={
-                isHovered
-                  ? "newscard__header-remove-saved-hidden"
-                  : "newscard__header-remove-saved"
-              }
-            >
-              Remove from saved
-            </div>
-            <div className="newscard__header-delete">
-              <button
-                className="newscard__header-trash"
-                onClick={handleRemoveSaved}
-                onMouseEnter={() => {
-                  setIsHovered(true);
-                }}
-                onMouseLeave={() => {
-                  setIsHovered(false);
-                }}
+              <p
+                className={
+                  isHovered
+                    ? "newscard__header-remove-saved-hidden"
+                    : "newscard__header-remove-saved"
+                }
               >
-                <img
-                  src={isHovered ? trashIconHover : trashIcon}
-                  alt="Remove from saved articles"
-                />
-              </button>
+                Remove from saved
+              </p>
+              <div className="newscard__header-delete">
+                <button
+                  className="newscard__header-trash"
+                  onClick={handleRemoveSaved}
+                  onMouseEnter={() => {
+                    setIsHovered(true);
+                  }}
+                  onMouseLeave={() => {
+                    setIsHovered(false);
+                  }}
+                >
+                  <img
+                    src={isHovered ? trashIconHover : trashIcon}
+                    alt="Remove from saved articles"
+                  />
+                </button>
+              </div>
             </div>
-            </div>
-          </>
-        ) : isLoggedIn && !isSaved ? (
-          <>
-            <button className="newscard__header-bookmark" onClick={handleSave}>
-              <img
-                src={isBookmarked ? bookmarkSaved : bookmarkImage}
-                alt="Save article"
-                className="newscard__header-bookmark-active"
-              />
-            </button>
-          </>
-        ) : !isLoggedIn ? (
-          <>
-            <div
+          </div>
+        </>
+      ) : (
+        ""
+      )}
+      {isLoggedIn && !isSaved ? (
+        <div className="newscard__header-bookmark">
+          <button
+            className="newscard__header-bookmark-button"
+            onClick={handleSave}
+          >
+            <img
+              src={isBookmarked ? bookmarkSaved : bookmarkImage}
+              alt="Save article"
+              className="newscard__header-bookmark-active"
+            />
+          </button>
+        </div>
+      ) : !isLoggedIn ? (
+        <>
+          <div className="newscard__header-bookmark">
+            <p
               className={
                 isHovered
                   ? "newscard__header-signin-hidden"
@@ -97,9 +105,9 @@ function NewsCard({ item, handleSavedArticle, handleRemoveArticle }) {
               }
             >
               Sign in to save articles
-            </div>
+            </p>
             <button
-              className="newscard__header-bookmark"
+              className="newscard__header-bookmark-button"
               onMouseEnter={() => {
                 setIsHovered(true);
               }}
@@ -113,24 +121,23 @@ function NewsCard({ item, handleSavedArticle, handleRemoveArticle }) {
                 className="newscard__header-bookmark-active"
               />
             </button>
-          </>
-        ) : (
-          ""
-        )}
-      </div>
+          </div>
+        </>
+      ) : (
+        ""
+      )}
+
       <img
         className="newscard__image"
         src={!isValidImage ? defaultImage : item.urlToImage}
         alt={item.title}
       />
-      <div className="newscard__date">{formatArticleDate(articleDate)}</div>
-      <div className="newscard__title">{truncateString(item.title, 50)}</div>
-      <div className="newscard__abstract">
+      <p className="newscard__date">{formatArticleDate(articleDate)}</p>
+      <h1 className="newscard__title">{truncateString(item.title, 50)}</h1>
+      <p className="newscard__abstract">
         {item.description ? truncateString(item.description, 205) : item.title}
-      </div>
-      <div className="newscard__source">
-        {item.source.name || item.source.id}
-      </div>
+      </p>
+      <p className="newscard__source">{item.source.name || item.source.id}</p>
     </div>
   );
 }

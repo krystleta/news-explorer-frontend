@@ -30,6 +30,14 @@
   align-items: center;
 }
 
+.footer__link a {
+  text-decoration: none;
+}
+
+.footer__link a:active, .footer__link a:visited {
+  color: #1a1b22;
+}
+
 .footer__link-github-icon {
   background: url(/src/assets/footer-github-icon.svg) no-repeat transparent;
   width: 24px;

@@ -2,9 +2,9 @@ import "./NavigationBar.css";
 import { useContext, useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { CurrentUserContext } from "../../contexts/CurrentUserContext";
-import logo from "../../assets/logo.svg";
-import logoBlack from "../../assets/logo-black.svg";
-import logouticon from "../../assets/logout-icon.png";
+import logo from "../../assets/logo.png";
+import logoBlack from "../../assets/logo-black.jpg";
+import logouticon from "../../assets/logout-icon.svg";
 import logouticonblack from "../../assets/logout-icon-black.svg";
 
 function NavigationBar({ handleLoginModal, handleLogOut }) {
@@ -14,9 +14,7 @@ function NavigationBar({ handleLoginModal, handleLogOut }) {
   const [burgerButtonClass, setBurgerButtonClass] = useState(
     "burger-bar unclicked"
   );
-  const [mobileMenu, setMobileMenu] = useState(
-    "-mobile hidden"
-  );
+  const [mobileMenu, setMobileMenu] = useState("-mobile hidden");
   const [isMenuClicked, setIsMenuClicked] = useState(false);
   const location = useLocation();
 
@@ -31,14 +29,10 @@ function NavigationBar({ handleLoginModal, handleLogOut }) {
   const toggleMenu = () => {
     if (!isMenuClicked) {
       setBurgerButtonClass("burger-bar clicked");
-      setMobileMenu(
-        "-mobile visible"
-      );
+      setMobileMenu("-mobile visible");
     } else {
       setBurgerButtonClass("burger-bar unclicked");
-      setMobileMenu(
-        "-mobile hidden"
-      );
+      setMobileMenu("-mobile hidden");
     }
     setIsMenuClicked(!isMenuClicked);
   };
@@ -46,8 +40,6 @@ function NavigationBar({ handleLoginModal, handleLogOut }) {
   useEffect(() => {
     window.addEventListener("resize", handleResize);
   }, [setIsMobile]);
-
-  
 
   return (
     <>
@@ -71,21 +63,32 @@ function NavigationBar({ handleLoginModal, handleLogOut }) {
               className="navigation__bar-logo"
             />
           </Link>
-          <div className={isMobile ? "navigation__hamburger" : ""} onClick={toggleMenu}>
+          <div
+            className={isMobile ? "navigation__hamburger" : ""}
+            onClick={toggleMenu}
+          >
             <div className={burgerButtonClass}></div>
             <div className={burgerButtonClass}></div>
           </div>
         </div>
         <div className={`navigation__bar-right${isMobile ? mobileMenu : ""}`}>
           <ul className="navigation__bar-links">
-            <li className="navigation__bar-link">
+            <li
+              className={`navigation__bar-link${
+                location.pathname === "/" ? "-active" : ""
+              }`}
+            >
               <Link to="/">
                 <button className="navigation__bar-button">Home</button>
               </Link>
             </li>
             {isLoggedIn ? (
               <>
-                <li className="navigation__bar-link-saved">
+                <li
+                  className={`navigation__bar-link-saved${
+                    location.pathname === "/saved-news" ? "-active" : ""
+                  }`}
+                >
                   <Link to="/saved-news">
                     <button className="navigation__bar-button">
                       Saved articles

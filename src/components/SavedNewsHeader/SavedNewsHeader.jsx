@@ -12,18 +12,18 @@ function SavedNewsHeader() {
 
   return (
     <>
-      <div className="savednews__header-title">Saved articles</div>
-      <div className="savednews__header-info">
+      <h1 className="savednews__header-title">Saved articles</h1>
+      <p className="savednews__header-info">
         {currentUser?.name}, you have{" "}
         {savedArticles.length === 0 ? "no" : savedArticles.length} saved article
         {savedArticles.length === 1 ? "" : "s"}
-      </div>
+      </p>
 
       {keywordInfo ? (
-        <div className="savednews__header-keywords">
+        <p className="savednews__header-keywords">
           By keywords: &nbsp;
           <span className="savednews__header-tags">{ keywordInfo }</span>
-        </div>
+        </p>
       ) : (
         ""
       )}
