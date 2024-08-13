@@ -18,16 +18,16 @@ function NewsCardList({ handleSavedArticle, handleRemoveArticle }) {
       {hasSearched ? (
         <>
           <ul className="newscardlist__items">
-            <li className="newscardlist__item">
-              {searchResultArticles.slice(0, visible).map((item) => (
+            {searchResultArticles.slice(0, visible).map((item) => (
+              <li className="newscardlist__item">
                 <NewsCard
                   key={item.publishedAt}
                   item={item}
                   handleSavedArticle={handleSavedArticle}
                   handleRemoveArticle={handleRemoveArticle}
                 />
-              ))}
-            </li>
+              </li>
+            ))}
           </ul>
           <div className="newscardlist__more">
             {visible < searchResultArticles.length && (

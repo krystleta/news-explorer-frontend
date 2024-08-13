@@ -1,6 +1,7 @@
 .savednews__header-title {
   font-family: "Roboto", Arial, sans-serif;
   font-size: 18px;
+  font-weight: 400px;
   line-height: 1.3;
   color: rgba(26, 27, 34, 0.5);
 }
@@ -18,6 +19,8 @@
   font-size: 18px;
   line-height: 1.3;
   color: #1a1b22;
+  padding: 0;
+  margin: 0;
 }
 
 .savednews__header-tags {
@@ -26,7 +29,11 @@
 
 @media screen and (max-width: 768px) {
   .savednews__header-info {
+    max-width: 400px;
     font-size: 30px;
+  }
+  .savednews__header-title {
+    max-width: 400px;
   }
 }
 

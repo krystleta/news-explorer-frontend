@@ -17,17 +17,17 @@
 .newscardlist__items {
   margin: 0;
   padding: 0;
-}
-
-.newscardlist__item {
   display: flex;
   column-gap: 16px;
   row-gap: 16px;
   flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.newscardlist__item {
   padding: 0;
   margin: 0;
 }
-
 
 .newscardlist__more {
   margin: 64px auto 80px;
@@ -55,11 +55,14 @@
   .newscardlist__section {
     margin: 40px;
   }
+  .newscardlist__items {
+    justify-content: center;
+    /* margin: 62px 0; */
+  }
 }
 
 @media screen and (min-width: 768px) {
-  .newscardlist__item {
-    /* margin: auto; */
+  .newscardlist__items {
     justify-content: center;
   }
 }
@@ -71,8 +74,7 @@
   .newscardlist__heading {
     font-size: 30px;
   }
-  .newscardlist__item {
-    /* margin: auto;*/
+  .newscardlist__items {
     justify-content: center; 
   }
 }

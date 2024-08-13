@@ -13,15 +13,15 @@ function SavedNewsCardsList({ handleRemoveArticle }) {
   return (
     <div className="savednewscardlist__section">
       <ul className="savednewscardlist__items">
-        <li className="savednewscardlist__item">
-          {savedArticles.slice(0, visible).map((item) => (
+        {savedArticles.slice(0, visible).map((item) => (
+          <li className="savednewscardlist__item">
             <NewsCard
               key={item.publishedAt}
               item={item}
               handleRemoveArticle={handleRemoveArticle}
             />
-          ))}
-        </li>
+          </li>
+        ))}
       </ul>
 
       {visible < savedArticles.length && (

@@ -88,6 +88,7 @@
   line-height: 1.7;
   font-weight: 600;
   color: #000000;
+  margin: 0;
 }
 
 .newscard__header-bookmark-button-active {
@@ -119,6 +120,7 @@
   font-weight: 600;
   color: #000000;
   transition: 0.3s ease-in-out;
+  margin: 0;
 }
 
 .newscard__header-remove-saved-hidden, .newscard__header-signin-hidden {

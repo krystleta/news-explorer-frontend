@@ -45,11 +45,11 @@ function NewsCard({ item, handleSavedArticle, handleRemoveArticle }) {
       {isLoggedIn && isSaved ? (
         <>
           <div className="newscard__header">
-            <div className="newscard__header-keyword">
+            <p className="newscard__header-keyword">
               {item.keywordTag ? item.keywordTag : " "}
-            </div>
+            </p>
             <div className="newscard__header-delete-container">
-              <div
+              <p
                 className={
                   isHovered
                     ? "newscard__header-remove-saved-hidden"
@@ -57,7 +57,7 @@ function NewsCard({ item, handleSavedArticle, handleRemoveArticle }) {
                 }
               >
                 Remove from saved
-              </div>
+              </p>
               <div className="newscard__header-delete">
                 <button
                   className="newscard__header-trash"
@@ -97,7 +97,7 @@ function NewsCard({ item, handleSavedArticle, handleRemoveArticle }) {
       ) : !isLoggedIn ? (
         <>
           <div className="newscard__header-bookmark">
-            <div
+            <p
               className={
                 isHovered
                   ? "newscard__header-signin-hidden"
@@ -105,7 +105,7 @@ function NewsCard({ item, handleSavedArticle, handleRemoveArticle }) {
               }
             >
               Sign in to save articles
-            </div>
+            </p>
             <button
               className="newscard__header-bookmark-button"
               onMouseEnter={() => {
